@@ -110,7 +110,7 @@
         </div>
 
         <div class="row row-cols-1 row-cols-md-4 g-4 mx-auto w-75 pb-5">
-            
+
             <div class="col">
                 <div class="card h-100">
                     <img src="{{ song.image_url }}" class="card-img-top" alt="...">
@@ -125,9 +125,20 @@
                 <div class="card h-100">
                     <img src="{{ song.image_url }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title"></h5>
+                        <h5 class="card-title">이름</h5>
                         <p class="card-text">{{song.artist}}</p>
                         <p class="card-text">추천 by {{song.username}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://www.venturesquare.net/wp-content/uploads/2017/03/170306-bunno--2-782x522.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">주백두산(AI 7기)</h5>
+                        <p class="card-text">MBTI: INTP</p>
+                        <p class="card-text">너무어려워요 ㅡㅡ^</p>
                     </div>
                 </div>
             </div>
@@ -141,17 +152,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="{{ song.image_url }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{song.title}}</h5>
-                        <p class="card-text">{{song.artist}}</p>
-                        <p class="card-text">추천 by {{song.username}}</p>
-                    </div>
-                </div>
-            </div>
-            
+
 
 
 
