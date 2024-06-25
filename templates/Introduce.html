@@ -11,7 +11,7 @@
         .background-banner {
             background-image: linear-gradient(45deg,
                     rgb(51 43 43 / 75%),
-                    rgb(20 19 20 / 61%)), url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/webjong/images/music_festival.jpg");
+                    rgb(20 19 20 / 61%)), url("https://images.pexels.com/photos/847402/pexels-photo-847402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
             max-height: 100%;
             background-position: center;
             background-size: cover;
@@ -19,6 +19,11 @@
             background-attachment: fixed;
         }
 
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         .card {
             width: 12rem;
             height: 15rem;
@@ -130,156 +135,158 @@
             </div>
         </div>
 
-        <div class="container mt-4">
-            <div class="row justify-content-center">
-                <!-- 카드 -->
-                <div class="col-auto">
-                    <div class="card" data-bs-toggle="modal" data-bs-target="#songModal1">
-                        <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""  
-                            class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">나지수(AI 7기)</h5>
-                            <p class="card-text">MBIT: INFJ</p>
-                            <p class="card-text">같이 열심히 해봅시다.</p>
+        <div class="row row-cols-1 row-cols-md-4 g-4 mx-auto w-75 pb-5">
+
+            <div class="container mt-4">
+                <div class="row justify-content-center">
+                    <!-- 카드 -->
+                    <div class="col-auto">
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#songModal1">
+                            <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""  
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">나지수(AI 7기)</h5>
+                                <p class="card-text">MBIT: INFJ</p>
+                                <p class="card-text">같이 열심히 해봅시다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#songModal2">
+                            <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">텍스트 입력</h5>
+                                <p class="card-text">텍스트 입력</p>
+                                <p class="card-text">텍스트 입력</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#songModal3">
+                            <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">텍스트 입력</h5>
+                                <p class="card-text">텍스트 입력</p>
+                                <p class="card-text">텍스트 입력</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#songModal4">
+                            <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">텍스트 입력</h5>
+                                <p class="card-text">텍스트 입력</p>
+                                <p class="card-text">텍스트 입력</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-auto">
-                    <div class="card" data-bs-toggle="modal" data-bs-target="#songModal2">
-                        <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""
-                            class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">텍스트 입력</h5>
+            </div>
+    
+            <!-- 1번 카드 Modal  -->
+            <div class="modal fade" id="songModal1" tabindex="-1" aria-labelledby="songModalLabel1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="songModalLabel1">텍스트 입력</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""
+                                class="img-fluid">
                             <p class="card-text">텍스트 입력</p>
                             <p class="card-text">텍스트 입력</p>
                         </div>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="card" data-bs-toggle="modal" data-bs-target="#songModal3">
-                        <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""
-                            class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">텍스트 입력</h5>
-                            <p class="card-text">텍스트 입력</p>
-                            <p class="card-text">텍스트 입력</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="card" data-bs-toggle="modal" data-bs-target="#songModal4">
-                        <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""
-                            class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">텍스트 입력</h5>
-                            <p class="card-text">텍스트 입력</p>
-                            <p class="card-text">텍스트 입력</p>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- 1번 카드 Modal  -->
-        <div class="modal fade" id="songModal1" tabindex="-1" aria-labelledby="songModalLabel1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="songModalLabel1">텍스트 입력</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    
+            <!-- 2번 카드 Modal 2 -->
+            <div class="modal fade" id="songModal2" tabindex="-1" aria-labelledby="songModalLabel2" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="songModalLabel2">텍스트 입력</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""
+                                class="img-fluid">
+                            <p class="card-text">텍스트 입력</p>
+                            <p class="card-text">텍스트 입력</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close"></button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""
-                            class="img-fluid">
-                        <p class="card-text">텍스트 입력</p>
-                        <p class="card-text">텍스트 입력</p>
+                </div>
+            </div>
+    
+            <!-- 3번 카드 Modal 3 -->
+            <div class="modal fade" id="songModal3" tabindex="-1" aria-labelledby="songModalLabel3" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="songModalLabel3">텍스트 입력</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt="" 
+                                class="img-fluid">
+                            <p class="card-text">텍스트 입력</p>
+                            <p class="card-text">텍스트 입력</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close"></button>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+    
+            <!-- 4번카드 Modal 4 -->
+            <div class="modal fade" id="songModal4" tabindex="-1" aria-labelledby="songModalLabel4" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="songModalLabel4">텍스트 입력</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""
+                                class="img-fluid">
+                            <p class="card-text">텍스트 입력</p>
+                            <p class="card-text">텍스트 입력</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close"></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- 2번 카드 Modal 2 -->
-        <div class="modal fade" id="songModal2" tabindex="-1" aria-labelledby="songModalLabel2" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="songModalLabel2">텍스트 입력</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""
-                            class="img-fluid">
-                        <p class="card-text">텍스트 입력</p>
-                        <p class="card-text">텍스트 입력</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close"></button>
-                    </div>
+    
+        <div class="container">
+            <footer>
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <p>© 2023 Company, Inc. All rights reserved.</p>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-body-emphasis" href="https://www.youtube.com/@SpartaCodingClub"><i
+                                    class="bi bi-youtube"></i></a></li>
+                        <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/spartacodingclub/"><i
+                                    class="bi bi-instagram"></i></a></li>
+                        <li class="ms-3"><a class="link-body-emphasis" href="https://spartacodingclub.kr/blog"><i
+                                    class="bi bi-postcard"></i></a></li>
+                    </ul>
                 </div>
-            </div>
+            </footer>
         </div>
-
-        <!-- 3번 카드 Modal 3 -->
-        <div class="modal fade" id="songModal3" tabindex="-1" aria-labelledby="songModalLabel3" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="songModalLabel3">텍스트 입력</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt="" 
-                            class="img-fluid">
-                        <p class="card-text">텍스트 입력</p>
-                        <p class="card-text">텍스트 입력</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close"></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 4번카드 Modal 4 -->
-        <div class="modal fade" id="songModal4" tabindex="-1" aria-labelledby="songModalLabel4" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="songModalLabel4">텍스트 입력</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""
-                            class="img-fluid">
-                        <p class="card-text">텍스트 입력</p>
-                        <p class="card-text">텍스트 입력</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close"></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <footer>
-            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                <p>© 2023 Company, Inc. All rights reserved.</p>
-                <ul class="list-unstyled d-flex">
-                    <li class="ms-3"><a class="link-body-emphasis" href="https://www.youtube.com/@SpartaCodingClub"><i
-                                class="bi bi-youtube"></i></a></li>
-                    <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/spartacodingclub/"><i
-                                class="bi bi-instagram"></i></a></li>
-                    <li class="ms-3"><a class="link-body-emphasis" href="https://spartacodingclub.kr/blog"><i
-                                class="bi bi-postcard"></i></a></li>
-                </ul>
-            </div>
-        </footer>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
