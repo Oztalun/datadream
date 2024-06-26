@@ -33,7 +33,7 @@ with app.app_context():
 @app.route("/")
 def home():
     name = '데이터드림'
-    motto = "메인페이지에 올라갈 내용을 적어주세요!-백두산 수정"
+    motto = "데이터드림팀의 소개 페이지"
 
     context = {
         "name": name,
