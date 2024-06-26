@@ -103,7 +103,41 @@
         </div>
 
 
-        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog d-flex">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">최애 음악</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{ url_for('music_create') }}" method="GET">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">유저</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" name="username">
+                                <div id="emailHelp" class="form-text">사용자(추천인)의 이름을 넣어주세요.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">노래 제목</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" name="title">
+                                <div id="emailHelp" class="form-text">좋아하는 노래 제목을 넣어주세요.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">가수</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" name="artist">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">앨범 커버URL</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" name="image_url">
+                            </div>
+                            <button type="submit" class="btn btn-danger">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="row row-cols-1 row-cols-md-4 g-4 mx-auto w-75 pb-5">
 
