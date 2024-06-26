@@ -44,6 +44,8 @@
 
         .modal-body img {
             width: 100%;
+            max-height: 500px;
+            object-fit: cover;
         }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -101,7 +103,41 @@
         </div>
 
 
-        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog d-flex">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">최애 음악</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{ url_for('music_create') }}" method="GET">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">유저</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" name="username">
+                                <div id="emailHelp" class="form-text">사용자(추천인)의 이름을 넣어주세요.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">노래 제목</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" name="title">
+                                <div id="emailHelp" class="form-text">좋아하는 노래 제목을 넣어주세요.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">가수</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" name="artist">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">앨범 커버URL</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" name="image_url">
+                            </div>
+                            <button type="submit" class="btn btn-danger">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="row row-cols-1 row-cols-md-4 g-4 mx-auto w-75 pb-5">
 
@@ -110,8 +146,8 @@
                     <!-- 카드 -->
                     <div class="col-auto">
                         <div class="card" data-bs-toggle="modal" data-bs-target="#songModal1">
-                            <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""
-                                class="card-img-top">
+                            <img src="https://blog.kakaocdn.net/dn/nAmvv/btsIbHLe4MD/2j9d35durMV0yyAuL429QK/img.jpg" srcset="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FnAmvv%2FbtsIbHLe4MD%2F2j9d35durMV0yyAuL429QK%2Fimg.jpg" onerror="this.onerror=null; this.src='//t1.daumcdn.net/tistory_admin/static/images/no-image-v1.png'; this.srcset='//t1.daumcdn.net/tistory_admin/static/images/no-image-v1.png';" data-filename="KakaoTalk_20240626_102617671_01.jpg" >
+
                             <div class="card-body">
                                 <h5 class="card-title">나지수(AI 7기)</h5>
                                 <p class="card-text">MBIT: INFJ</p>
@@ -126,7 +162,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">전민성(AI 7기)</h5>
                                 <p class="card-text">MBIT:INFP</p>
-                                <p class="card-text">최선을 다해 최고를 위해</p>
+                                <p class="card-text">침착하게 실수 하지 말자</p>
                             </div>
                         </div>
                     </div>
@@ -164,12 +200,12 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""
+                            <img src="https://blog.kakaocdn.net/dn/nAmvv/btsIbHLe4MD/2j9d35durMV0yyAuL429QK/img.jpg" srcset="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FnAmvv%2FbtsIbHLe4MD%2F2j9d35durMV0yyAuL429QK%2Fimg.jpg" onerror="this.onerror=null; this.src='//t1.daumcdn.net/tistory_admin/static/images/no-image-v1.png'; this.srcset='//t1.daumcdn.net/tistory_admin/static/images/no-image-v1.png';" data-filename="KakaoTalk_20240626_102617671_01.jpg" >
                                 class="img-fluid">
                             <p class="card-text">장점: 말하는것보다 듣는걸 더 좋아합니다.</p>
                             <p class="card-text">협업스타일 소개: 새로운 의견은 언제나 수용할 준비가 되어있습니다. </p>
                             <p class="card-text">취미: 만화, 소설, 게임</p>
-                            <p class="card-text">앞으로의 각오: 서로 돕고 같이 고민하고 성장합시다!</p>
+                            <p class="card-text">앞으로의 각오: 서로 돕고 같이 고민하고 성장합시다! </p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -183,12 +219,12 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="songModalLabel2">텍스트 입력</h5>
+                            <h5 class="modal-title" id="songModalLabel2">전민성(AI_7기)</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMjlfMTA1%2FMDAxNjExODUyMjMzNjgy.rkKdH5YNFmEEATBBaDwo6I0K5hU1-KwBADIWxAOn7b8g.PbSGle3w7YgObVkt8qdcZ0DB9hrduREqX6n-X1ENskUg.JPEG.yiijuhee0%2F2C80E079-EF54-4AF3-85F3-4E87E93B5DD3-6773-00000354ADC91EA1_file.jpg&type=sc960_832" alt=""
-                                class="img-fluid">
+                            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMjlfMTA1%2FMDAxNjExODUyMjMzNjgy.rkKdH5YNFmEEATBBaDwo6I0K5hU1-KwBADIWxAOn7b8g.PbSGle3w7YgObVkt8qdcZ0DB9hrduREqX6n-X1ENskUg.JPEG.yiijuhee0%2F2C80E079-EF54-4AF3-85F3-4E87E93B5DD3-6773-00000354ADC91EA1_file.jpg&type=sc960_832"
+                            alt="" class="img-fluid">
                             <p class="card-text">GIT 억까ㅠㅠ 파일 다 날라감</p>
                             <p class="card-text">PUSH, PULL 안되서 COMMIT 삭제했더니 파일 하나도 안남음 주의</p>
                         </div>
@@ -208,8 +244,8 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9UM1bzPnadNDRNTfLkKmPzv1kKC81TMBxjw&s" alt=""
-                                class="img-fluid">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9UM1bzPnadNDRNTfLkKmPzv1kKC81TMBxjw&s"
+                            alt="" class="img-fluid"><!--style="max-height: 500px; object-fit: cover;"-->
                             <p class="card-text">텍스트 입력</p>
                             <p class="card-text">텍스트 입력</p>
                         </div>
@@ -229,8 +265,8 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt=""
-                                class="img-fluid">
+                            <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg"
+                            alt="" class="img-fluid">
                             <p class="card-text">텍스트 입력</p>
                             <p class="card-text">텍스트 입력</p>
                         </div>
